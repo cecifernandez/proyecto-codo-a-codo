@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Proba el mejor café" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="api.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -22,9 +24,9 @@
           <li><a href="#cafes">CAFES</a></li>
           <li><a href="#postres">POSTRES</a></li>
           <li><a href="#shop">SHOP</a></li>
-          <li><a href="#contactos">CONTACTANOS</a></li>
+          <li><a href="#contact-form">CONTACTANOS</a></li>
         </ul>
-        <div class="navDonde">DÓNDE ESTAMOS</div>
+        <div class="navDonde"><a href="#mapa">DÓNDE ESTAMOS</a></div>
       </nav>
     </header>
 
@@ -60,21 +62,61 @@
           <div class="cafeLista">
             <ul>
               <li>
-                <img src="img/moca.jpg" alt="" class="mocaImg" />
-                <h2>Mocaccino</h2>
-                <p>$$$</p>
+                <div class="flip-box">
+                  <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                      <img src="img/moca.jpg" alt="" class="mocaImg" />
+                    </div>
+                    <div class="flip-box-back">
+                      <p>Café espresso, con leche vaporizada y chocolate</p>
+                    </div>
+                  </div>
+
+                  <h2>Mocaccino</h2>
+                  <p>$$$</p>
+                </div>
               </li>
               <li>
-                <img src="img/macchiato.jpg" alt="" class="macImg" />
-                <h2>Caramel Machiatto</h2>
-                <p>$$$</p>
+                <div class="flip-box">
+                  <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                      <img src="img/macchiato.jpg" alt="" class="macImg" />
+                    </div>
+                    <div class="flip-box-back">
+                      <p>
+                        Café espresso, con leche, jarabe de vainlla y salsa de
+                        caramelo
+                      </p>
+                    </div>
+                  </div>
+
+                  <h2>Caramel Machiatto</h2>
+                  <p>$$$</p>
+                </div>
               </li>
               <li>
-                <img src="img/capuccino.jpg" alt="" class="capImg" />
-                <h2>Capuccino</h2>
-                <p>$$$</p>
+                <div class="flip-box">
+                  <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                      <img src="img/capuccino.jpg" alt="" class="capImg" />
+                    </div>
+                    <div class="flip-box-back">
+                      <p>Café espresso, con leche y chocolate</p>
+                    </div>
+                  </div>
+                  <h2>Capuccino</h2>
+                  <p>$$$</p>
+                </div>
               </li>
             </ul>
+          </div>
+          <div class="recomendacion">
+            <h2 class="recTexto">
+              ¿No sabés qué pedir? ¡Te ayudamos!
+            </h2>
+            <span class="respuestaAPI">Te recomiendo: </span>
+            <button class="recBoton" onclick="obtenerCafe()">Recomendame un café</button>
+            <script src="api.js"></script>
           </div>
         </div>
       </section>
@@ -151,7 +193,12 @@
       </section>
       <div class="col-12">
         <div class="newsletter">
-          <form id="contact-form" class="newsletter-form">
+          <form
+            id="contact-form"
+            class="newsletter-form"
+            action="https://formspree.io/f/xqkjloal"
+            method="POST"
+          >
             <div class="row">
               <div class="col-12 txt-center">
                 <input
@@ -180,13 +227,13 @@
                 <input type="submit" value="ENVIAR" class="submitBut" />
               </div>
             </div>
+            <script src="form.js"></script>
           </form>
         </div>
       </div>
     </main>
   </body>
 
-  <!--4 campos formmulario nombre mail telefono mensaje en otra archio animado qu aparezca -->
   <footer class="footer">
     <div class="iconos">
       <img src="/img/instagram.png" alt="" />
@@ -195,4 +242,3 @@
   </footer>
 </html>
 
-<!-- /* section 6, */ -->
